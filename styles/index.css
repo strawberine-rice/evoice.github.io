@@ -1,0 +1,161 @@
+.body{
+  scroll-behavior:smooth;
+}
+
+.layeredContainer{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  width: 100vw;
+  background-image: url('https://i.pinimg.com/736x/74/3f/6b/743f6b19c4cb5ca4cadcc300e1d1d08a.jpg');
+  background-position: center;
+  background-size:cover;
+
+
+}
+
+.hero{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  padding:30px;
+  z-index: 0;
+
+}
+.heroText{
+  float: left;
+  font-size:larger;
+  text-align:left;
+  left:100px;
+}
+
+.heroButton{
+  background-color: var(--deepBlue);
+  font-size:15px;
+  color: #fff;
+  padding:12px;
+  height:50px;
+  min-width:110px;
+  border-radius:30px
+}
+
+
+/*START OF SCROLLBAR CSS CODE*/
+.articleBar{
+    transform:translateY(20%); /* margin-top:20vh; is better to use but cause text to exit height of container*/
+    display:flex;
+    flex-direction: column;
+    background-color:var(--deepBlue);
+    height: 400px;
+    
+    width:95vw;
+    justify-content: center;
+    align-items: center;
+    border-radius:10px;
+    opacity: 0.90;
+    position: relative;
+    z-index:1;
+
+}
+
+.articleBarText{
+  color: var(--deepGold);
+  text-align: left;
+  margin-left: 0;
+  font-size: 20px;
+  letter-spacing: 0.2em;
+  margin-right:76%;
+
+}
+
+.articleScrollBar {
+  display:flex;
+  flex-direction:row;
+  width: 92vw;
+  gap:5px;
+  align-items: center;
+  overflow:hidden;
+  justify-content: center; 
+
+}
+
+.articleScrollBar .scrollButton{
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  background-color: var(--deepGold);
+  border-radius: 100px;
+  cursor: pointer;
+  height: 50px;
+  width:50px;
+  font-size: 18px;
+  position:absolute;
+  border-color: #fff;
+  z-index:2;
+  transform: translateY(-60%);
+
+}
+
+.articleScrollBar .left {
+  left: 0;
+}
+
+.articleScrollBar .right {
+  right: 0;
+}
+
+.articleScrollBar p{
+  width:200px;
+  text-overflow: ellipsis;
+  overflow-y:hidden;
+  white-space: nowrap;
+  text-align: center;
+  color: var(--spenceGold);
+}
+
+
+.image-wrapper {
+  transition: transform 0.5s ease;
+  display: flex;
+  flex-direction: row-reverse;
+  overflow-x: auto; /* Allow horizontal scrolling */
+  white-space: nowrap;
+  position: relative;
+  min-width: 300px;
+  scroll-behavior: smooth; /* smooth scroll */
+}
+
+.image-wrapper::-webkit-scrollbar { /* Hide scrollbar */
+  display: none;
+}
+
+
+.image-wrapper img{
+  cursor: pointer;
+  height: 200px;
+  width: 200px;
+  padding-inline:10px;
+  border-radius:12px;
+  object-fit: cover;
+  
+}
+
+.articleDisplaySection{
+  height:fit-content;
+  width:100vw;
+  position: relative;
+}
+
+
+#content-area h3{
+  font-family: 'Handlee';
+  color:gray;
+  text-align: center;
+  opacity: 0.6;
+
+  
+}
